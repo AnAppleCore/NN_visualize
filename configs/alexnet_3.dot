@@ -1,10 +1,10 @@
 digraph G {
 	fontname = "Hilda 10"
+	bgcolor="transparent"
 	rankdir=TB
 	splines=line
 	nodesep=.08;
 	ranksep=1;
-	color=black;
 	edge [color=gray, arrowsize=.3];
 	node [fixedsize=true,label="",style=filled,penwidth=3, color=black,fillcolor=white,shape=circle]
 

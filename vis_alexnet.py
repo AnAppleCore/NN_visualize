@@ -27,6 +27,7 @@ def prefix():
     px = ''
     px += "digraph G {" + '\n'
     px += f"\tfontname = \"{font}\"" + '\n'
+    px += "\tbgcolor=\"transparent\"" + '\n'
     px += "\trankdir=TB" + '\n'
     px += "\tsplines=line" + '\n'
     px += "\tnodesep=.08;" + '\n'

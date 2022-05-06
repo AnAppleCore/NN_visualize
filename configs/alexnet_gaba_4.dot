@@ -1,0 +1,354 @@
+digraph G {
+	fontname = "Hilda 10"
+	bgcolor="transparent"
+	rankdir=TB
+	splines=line
+	nodesep=.08;
+	ranksep=1;
+	edge [color=gray, arrowsize=.3];
+	node [fixedsize=true,label="",style=filled,penwidth=3, color=black,fillcolor=white,shape=circle]
+
+	subgraph cluster_0 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l00 		 l01 		 l02 ;
+		label = "Input";
+	}
+
+	subgraph cluster_1 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l10 [fillcolor=1] 
+		 l11 [fillcolor=4] 
+		 l12 [fillcolor=6] 
+		 l13 [fillcolor=9] 
+;
+	}
+
+	subgraph cluster_2 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l20 [fillcolor=1] 
+		 l21 [fillcolor=3] 
+		 l22 [fillcolor=3] 
+		 l23 [fillcolor=4] 
+		 l24 [fillcolor=4] 
+		 l25 [fillcolor=4] 
+		 l26 [fillcolor=5] 
+		 l27 [fillcolor=5] 
+		 l28 [fillcolor=5] 
+		 l29 [fillcolor=6] 
+		 l210 [fillcolor=7] 
+		 l211 [fillcolor=9] 
+;
+	}
+
+	subgraph cluster_3 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l30 [fillcolor=1] 
+		 l31 [fillcolor=1] 
+		 l32 [fillcolor=1] 
+		 l33 [fillcolor=2] 
+		 l34 [fillcolor=2] 
+		 l35 [fillcolor=2] 
+		 l36 [fillcolor=2] 
+		 l37 [fillcolor=2] 
+		 l38 [fillcolor=2] 
+		 l39 [fillcolor=2] 
+		 l310 [fillcolor=2] 
+		 l311 [fillcolor=2] 
+		 l312 [fillcolor=2] 
+		 l313 [fillcolor=3] 
+		 l314 [fillcolor=3] 
+		 l315 [fillcolor=3] 
+		 l316 [fillcolor=3] 
+		 l317 [fillcolor=3] 
+		 l318 [fillcolor=3] 
+		 l319 [fillcolor=3] 
+		 l320 [fillcolor=4] 
+		 l321 [fillcolor=5] 
+		 l322 [fillcolor=7] 
+		 l323 [fillcolor=9] 
+;
+	}
+
+	subgraph cluster_4 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l40 [fillcolor=1] 
+		 l41 [fillcolor=2] 
+		 l42 [fillcolor=3] 
+		 l43 [fillcolor=3] 
+		 l44 [fillcolor=3] 
+		 l45 [fillcolor=3] 
+		 l46 [fillcolor=3] 
+		 l47 [fillcolor=3] 
+		 l48 [fillcolor=3] 
+		 l49 [fillcolor=3] 
+		 l410 [fillcolor=3] 
+		 l411 [fillcolor=3] 
+		 l412 [fillcolor=3] 
+		 l413 [fillcolor=3] 
+		 l414 [fillcolor=5] 
+		 l415 [fillcolor=9] 
+;
+	}
+
+	subgraph cluster_5 {
+		node [style=filled, shape=circle, colorscheme=gnbu9];
+		 l50 		 l51 		 l52 		 l53 		 l54 		 l55 		 l56 		 l57 		 l58 		 l59 		 l510 		 l511 		 l512 		 l513 		 l514 		 l515 ;
+	}
+
+	l00 -> l10
+	l00 -> l11
+	l00 -> l12
+	l00 -> l13
+	l01 -> l10
+	l01 -> l11
+	l01 -> l12
+	l01 -> l13
+	l02 -> l10
+	l02 -> l11
+	l02 -> l12
+	l02 -> l13
+	l10 -> l20
+	l10 -> l22
+	l10 -> l24
+	l10 -> l26
+	l10 -> l28
+	l10 -> l210
+	l12 -> l20
+	l12 -> l22
+	l12 -> l24
+	l12 -> l26
+	l12 -> l28
+	l12 -> l210
+	l20 -> l30
+	l20 -> l32
+	l20 -> l34
+	l20 -> l36
+	l20 -> l38
+	l20 -> l310
+	l20 -> l312
+	l20 -> l314
+	l20 -> l316
+	l20 -> l318
+	l20 -> l320
+	l20 -> l322
+	l22 -> l30
+	l22 -> l32
+	l22 -> l34
+	l22 -> l36
+	l22 -> l38
+	l22 -> l310
+	l22 -> l312
+	l22 -> l314
+	l22 -> l316
+	l22 -> l318
+	l22 -> l320
+	l22 -> l322
+	l24 -> l30
+	l24 -> l32
+	l24 -> l34
+	l24 -> l36
+	l24 -> l38
+	l24 -> l310
+	l24 -> l312
+	l24 -> l314
+	l24 -> l316
+	l24 -> l318
+	l24 -> l320
+	l24 -> l322
+	l26 -> l30
+	l26 -> l32
+	l26 -> l34
+	l26 -> l36
+	l26 -> l38
+	l26 -> l310
+	l26 -> l312
+	l26 -> l314
+	l26 -> l316
+	l26 -> l318
+	l26 -> l320
+	l26 -> l322
+	l28 -> l30
+	l28 -> l32
+	l28 -> l34
+	l28 -> l36
+	l28 -> l38
+	l28 -> l310
+	l28 -> l312
+	l28 -> l314
+	l28 -> l316
+	l28 -> l318
+	l28 -> l320
+	l28 -> l322
+	l210 -> l30
+	l210 -> l32
+	l210 -> l34
+	l210 -> l36
+	l210 -> l38
+	l210 -> l310
+	l210 -> l312
+	l210 -> l314
+	l210 -> l316
+	l210 -> l318
+	l210 -> l320
+	l210 -> l322
+	l30 -> l40
+	l30 -> l42
+	l30 -> l44
+	l30 -> l46
+	l30 -> l48
+	l30 -> l410
+	l30 -> l412
+	l30 -> l414
+	l32 -> l40
+	l32 -> l42
+	l32 -> l44
+	l32 -> l46
+	l32 -> l48
+	l32 -> l410
+	l32 -> l412
+	l32 -> l414
+	l34 -> l40
+	l34 -> l42
+	l34 -> l44
+	l34 -> l46
+	l34 -> l48
+	l34 -> l410
+	l34 -> l412
+	l34 -> l414
+	l36 -> l40
+	l36 -> l42
+	l36 -> l44
+	l36 -> l46
+	l36 -> l48
+	l36 -> l410
+	l36 -> l412
+	l36 -> l414
+	l38 -> l40
+	l38 -> l42
+	l38 -> l44
+	l38 -> l46
+	l38 -> l48
+	l38 -> l410
+	l38 -> l412
+	l38 -> l414
+	l310 -> l40
+	l310 -> l42
+	l310 -> l44
+	l310 -> l46
+	l310 -> l48
+	l310 -> l410
+	l310 -> l412
+	l310 -> l414
+	l312 -> l40
+	l312 -> l42
+	l312 -> l44
+	l312 -> l46
+	l312 -> l48
+	l312 -> l410
+	l312 -> l412
+	l312 -> l414
+	l314 -> l40
+	l314 -> l42
+	l314 -> l44
+	l314 -> l46
+	l314 -> l48
+	l314 -> l410
+	l314 -> l412
+	l314 -> l414
+	l316 -> l40
+	l316 -> l42
+	l316 -> l44
+	l316 -> l46
+	l316 -> l48
+	l316 -> l410
+	l316 -> l412
+	l316 -> l414
+	l318 -> l40
+	l318 -> l42
+	l318 -> l44
+	l318 -> l46
+	l318 -> l48
+	l318 -> l410
+	l318 -> l412
+	l318 -> l414
+	l320 -> l40
+	l320 -> l42
+	l320 -> l44
+	l320 -> l46
+	l320 -> l48
+	l320 -> l410
+	l320 -> l412
+	l320 -> l414
+	l322 -> l40
+	l322 -> l42
+	l322 -> l44
+	l322 -> l46
+	l322 -> l48
+	l322 -> l410
+	l322 -> l412
+	l322 -> l414
+	l40 -> l50
+	l40 -> l52
+	l40 -> l54
+	l40 -> l56
+	l40 -> l58
+	l40 -> l510
+	l40 -> l512
+	l40 -> l514
+	l42 -> l50
+	l42 -> l52
+	l42 -> l54
+	l42 -> l56
+	l42 -> l58
+	l42 -> l510
+	l42 -> l512
+	l42 -> l514
+	l44 -> l50
+	l44 -> l52
+	l44 -> l54
+	l44 -> l56
+	l44 -> l58
+	l44 -> l510
+	l44 -> l512
+	l44 -> l514
+	l46 -> l50
+	l46 -> l52
+	l46 -> l54
+	l46 -> l56
+	l46 -> l58
+	l46 -> l510
+	l46 -> l512
+	l46 -> l514
+	l48 -> l50
+	l48 -> l52
+	l48 -> l54
+	l48 -> l56
+	l48 -> l58
+	l48 -> l510
+	l48 -> l512
+	l48 -> l514
+	l410 -> l50
+	l410 -> l52
+	l410 -> l54
+	l410 -> l56
+	l410 -> l58
+	l410 -> l510
+	l410 -> l512
+	l410 -> l514
+	l412 -> l50
+	l412 -> l52
+	l412 -> l54
+	l412 -> l56
+	l412 -> l58
+	l412 -> l510
+	l412 -> l512
+	l412 -> l514
+	l414 -> l50
+	l414 -> l52
+	l414 -> l54
+	l414 -> l56
+	l414 -> l58
+	l414 -> l510
+	l414 -> l512
+	l414 -> l514
+}
