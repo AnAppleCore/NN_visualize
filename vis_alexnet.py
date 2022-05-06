@@ -16,7 +16,7 @@ for i in range(len(records)):
 # conv: 3-64-192-384-256-256
 # fc:   256*6*6-4096-4096-100
 net_layers = [3, 64, 192, 384, 256, 256]
-cluster_width = 16
+group_width = 16
 step_layer = [1, 2, 3, 4, 5]
 layers_label = ['Input']
 for i in range(1, len(net_layers)):
@@ -47,11 +47,11 @@ def layer_subgraph(record, step_id, layer_id):
         record = np.sort(record)
         neuron_num = len(record)
         assert neuron_num == net_layers[layer_id]
-        mean_record = np.zeros(neuron_num//cluster_width)
-        for i in range(neuron_num//cluster_width):
-            mean_record[i] = record[i*cluster_width:(i+1)*cluster_width].mean()
+        mean_record = np.zeros(neuron_num//group_width)
+        for i in range(neuron_num//group_width):
+            mean_record[i] = record[i*group_width:(i+1)*group_width].mean()
         max_a, min_a = mean_record.max(), mean_record.min()
-        for i in range(neuron_num//cluster_width):
+        for i in range(neuron_num//group_width):
             # r, g, b = color_from_activity(mean_record[i], max_a, min_a)
             # subgraph += f"\t\t l{layer_id}{i} [fillcolor=\"{r} {g} {b}\"] "
             c = color_from_activity(mean_record[i], max_a, min_a)
@@ -66,7 +66,7 @@ def layer_subgraph(record, step_id, layer_id):
         else:
             neuron_num = len(record)
             assert neuron_num == net_layers[layer_id]
-            for i in range(neuron_num//cluster_width):
+            for i in range(neuron_num//group_width):
                 subgraph += f"\t\t l{layer_id}{i} "
     subgraph += ';' + '\n'
     if layer_id == 0:
@@ -83,8 +83,8 @@ def color_from_activity(activity, m, n):
 def connections():
     cn = ''
     for i in range(1, len(net_layers)):
-        last_layer = net_layers[i-1]//cluster_width if i!=1 else net_layers[i-1]
-        next_layer = net_layers[i]//cluster_width
+        last_layer = net_layers[i-1]//group_width if i!=1 else net_layers[i-1]
+        next_layer = net_layers[i]//group_width
         for a in range(last_layer):
             for b in range(next_layer):
                 if (b%2 == 0 and a%2 == 0) or i==1:
