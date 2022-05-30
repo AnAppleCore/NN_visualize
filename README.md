@@ -16,7 +16,7 @@ Problem is, number of channels in CNN is enormous, so we grouped neurons with fi
 - 1. Make sure graphviz is installed. For Linux users:
 
     ```
-        suto-apt install graphiviz & pip3 install graphviz
+        sudo-apt install graphiviz & pip3 install graphviz
     ```
 
 - 2. Generate `.dot` graph configuration files

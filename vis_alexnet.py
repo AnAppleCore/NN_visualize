@@ -1,11 +1,26 @@
+import argparse
 import numpy as np
 
+parser = argparse.ArgumentParser(description='NN Visualize')
+parser.add_argument('-i', '--in_path', default="./records/alexnet_record.npy")
+parser.add_argument('-o', '--out_path', default="./configs/alexnet")
+parser.add_argument('-p', '--pen_width', default=3, type=int)
+parser.add_argument('-f', '--font', default="Hilda 10")
+parser.add_argument('-c', '--color_scheme', default='gnbu9')
+args = parser.parse_args()
+
 # Paremeters settings
-in_path = "./records/alexnet_record.npy"
-out_path = "./configs/alexnet"
-pen_width = 3
-font = "Hilda 10"
-color_scheme = 'gnbu9'
+# in_path = "./records/alexnet_record.npy"
+# out_path = "./configs/alexnet"
+# pen_width = 3
+# font = "Hilda 10"
+# color_scheme = 'gnbu9'
+
+in_path = args.in_path
+out_path = args.out_path
+pen_width = args.pen_width
+font = args.font
+color_scheme = args.color_scheme
 
 # Load neuron records here
 records = np.load(in_path, allow_pickle=True)
@@ -17,7 +32,8 @@ for i in range(len(records)):
 # fc:   256*6*6-4096-4096-100
 net_layers = [3, 64, 192, 384, 256, 256]
 group_width = 16
-step_layer = [1, 2, 3, 4, 5]
+# step_layer = [1, 2, 3, 4, 5]
+step_layer = [5]
 layers_label = ['Input']
 for i in range(1, len(net_layers)):
     layers_label += [f"Hidden: {net_layers[i]}"]
